@@ -49,19 +49,22 @@ npm run lerna:update
 
 ## Run test suites via mocha
 
-Run test suite for *red-api*:
+Run test suite for *red-api*
 
 ```bash
 cd packages/red-api
 mocha test/api/comms_spec.js
 ```
 
-Run test suite for *red-api*:
+Run test suite for *red-runtime*
 
 ```bash
 cd packages/red-runtime
 mocha test/runtime/i18n_spec.js
 ```
+
+See the current status of tests in `Testing.md` for *red-runtime* package.
+No `Testing.md` document yet for *red-api* (make one!?)
 
 ## Lerna dependencies
 
