@@ -7,6 +7,42 @@ but where each package can be versioned, managed and published as a separate uni
 
 See [Lerna Getting Started](https://lernajs.io/#getting-started) for a typical development workflow.
 
+## Quick start
+
+Install `lerna` as a global binary
+
+```bash
+npm i -g lerna
+```
+
+Install dependencies for *red-api* (incl. local linking to modules in `/packages`)
+
+```bash
+cd packages/red-api
+npm run lerna:update
+```
+
+Install dependencies for *red-runtime* (incl. local linking to modules in `/packages`)
+
+```bash
+cd packages/red-runtime
+npm run lerna:update
+```
+
+Run test suite for *red-api*:
+
+```bash
+cd packages/red-api
+mocha test/api/comms_spec.js
+```
+
+Run test suite for *red-api*:
+
+```bash
+cd packages/red-runtime
+mocha test/runtime/i18n_spec.js
+```
+
 ## Lerna dependencies
 
 A lerna package can been configured with internal (local) dependencies such as demonstrated in the `red-api` package:
